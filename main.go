@@ -101,31 +101,3 @@ func startapi() {
 		conn.Close()
 	}()
 }
-
-/*
-
-
-type lqlhandler struct {
-	lqlhandlers map[string]http.Handler
-
-	mu sync.Mutex
-}
-
-func (lh *lqlhandler) addHandler(aid string, handler http.Handler) {
-	lh.lqlhandlers[aid] = handler
-}
-
-func (lh *lqlhandler) setBaseHandler() {
-	http.HandleFunc("/lql/", func(resp http.ResponseWriter, req *http.Request) {
-		lh.mu.Lock()
-		defer lh.mu.Unlock()
-
-		aidstr := req.URL.Path[1:2]
-		if handler, ok := lqlhandler.lqlhandlers[aidstr]; ok {
-			return handler(resp, req)
-		}
-		return http.NotFound(resp, req)
-	})
-}
-
-*/
