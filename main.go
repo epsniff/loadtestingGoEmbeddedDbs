@@ -66,8 +66,8 @@ func createdata(key string) []byte {
 	data := &testentity{
 		Key:        key,
 		FirstName:  "Eric",
-		LastName:   "Sniff",
-		Address:    "1234 loadtest street, Portland, OR 97123",
+		LastName:   "Foo",
+		Address:    "1234 loadtest street, MainLandCity, AZ 97123",
 		CreateTime: time.Now().Unix(),
 	}
 
@@ -86,7 +86,7 @@ func startapi() {
 		json.NewEncoder(rw).Encode(metrics.DefaultRegistry)
 	})
 
-	bind := ":5500"
+	bind := ":5103"
 	conn, err := net.Listen("tcp", bind)
 	if err != nil {
 		log.Printf("[metrics] Error listening on %s: %v", bind, err)
