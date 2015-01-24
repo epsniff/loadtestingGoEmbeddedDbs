@@ -13,8 +13,8 @@ import (
 
 to install forest db
 
-mkdir ~/Dropbox/go/root/src/github.com/couchbaselabs/
-cd  ~/Dropbox/go/root/src/github.com/couchbaselabs/
+mkdir $GOPATH/src/github.com/couchbaselabs/
+cd  $GOPATH/src/github.com/couchbaselabs/
 git clone https://github.com/couchbaselabs/forestdb.git
 cd forestdb
 mkdir build
